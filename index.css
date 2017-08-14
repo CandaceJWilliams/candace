@@ -1,0 +1,79 @@
+
+html, body {
+	margin: 0;
+	overflow: hidden;
+	-webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+canvas {
+	border: 1px solid black;
+	position: absolute;
+	z-index: -1;
+}
+
+#labelDiv {
+    font-size: 70px;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    right: 25%
+    bottom: 25%;
+    z-index: 1;
+    color: white;
+}
+
+div {
+	z-index: 1;
+}
+
+#top_button {
+	position: absolute;
+	height: 1%;
+	width: 23%;
+	transform: translate(173%, 600%);
+	z-index: 1;
+	background-color: white;
+}
+
+#bottom_button {
+	position: absolute;
+	height: 1%;
+	width: 23%;
+	transform: translate(173%, 9300%);
+	z-index: 1;
+	background-color: white;
+}
+
+.display {
+	position: absolute;
+	height: 50%;
+	width: 30%;
+	transform: translate(120%, 64%);
+	z-index: 2;
+}
+
+#over {
+	position: absolute;
+    margin: 0 auto;
+    z-index: 2;
+    background: red;
+}
+
+img {
+	-webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slide 0.5s forwards;
+    animation-delay: 2s;
+    display: block;
+    margin: 0 auto;
+}
+
+#icons {
+	position: absolute;
+    margin: 0 auto;
+    z-index: 2;
+
+}
