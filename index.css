@@ -8,8 +8,9 @@ html, body {
     transition: 1s ease-in-out;
 }
 
+
+
 canvas {
-	border: 1px solid black;
 	position: absolute;
 	z-index: -1;
 }
@@ -31,29 +32,44 @@ div {
 
 #top_button {
 	position: absolute;
-	height: 1%;
+	height: 0.5%;
 	width: 23%;
-	transform: translate(173%, 600%);
-	z-index: 1;
+	transform: translate(169%, 600%);
+	z-index: 6;
 	background-color: white;
 }
 
 #bottom_button {
 	position: absolute;
-	height: 1%;
+	height: 0.5%;
 	width: 23%;
-	transform: translate(173%, 9300%);
-	z-index: 1;
+	transform: translate(169%, 19300%);
+	z-index: 6;
 	background-color: white;
 }
 
 .display {
 	position: absolute;
-	height: 50%;
 	width: 30%;
-	transform: translate(120%, 64%);
+	height: 40%;
+	transform: translate(116%, 73%);
 	z-index: 2;
+	justify-content: center;
+	/*border-color: black;
+	border-style: solid;*/
+	justify-content: stretch;
 }
+
+.display2 {
+	position: absolute;
+	display: inline-block;
+	width: 40%;
+	height: 10%;
+	transform: translate(75%, 700%);
+	z-index: 3;
+ 	/*border-color: black;
+	border-style: solid;*/
+ }
 
 #over {
 	position: absolute;
@@ -63,17 +79,92 @@ div {
 }
 
 img {
-	-webkit-animation: slide 0.5s forwards;
+	max-width: 100%;
+    height: auto;
+    /*width: auto\9; /* ie8*/ 
+	-webkit-animation: slide 0.5s alternate backwards;
     -webkit-animation-delay: 2s;
-    animation: slide 0.5s forwards;
+   	animation: slide 0.5s alternate backwards;
     animation-delay: 2s;
-    display: block;
     margin: 0 auto;
 }
 
-#icons {
-	position: absolute;
-    margin: 0 auto;
-    z-index: 2;
 
+.nav {
+	float: left !important;
+}
+
+.icons {
+	float: left;
+	display: block;
+    /*padding: 1%;*/
+	background-color: inherit !important;
+	height: auto;
+	/*width: 8vw;*/
+	width: 25%;
+}
+
+#box {
+	/*position: absolute;
+	top: 50%;*/
+	/*max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */*/
+	z-index: 3;
+	color: white;
+	font-size: 5.9vw;
+	font-size: 3.0vh;
+	/*font-family: 'Armata';*/
+	color: white;
+ 	
+}
+
+
+h3 {
+	top: 10%;
+	z-index: 5;
+	color: white;
+}
+
+.override {
+	display: inline-block;
+	z-index: 3;
+}
+
+.tab {
+	list-style-type: none;
+    padding: 0.5%;
+    overflow: hidden;
+    /*border-style: solid;
+    border-color: black;*/
+    width: 40vw;
+    left: 5%;
+}
+
+#arrow_up {
+	position: absolute;
+	width: 5%;
+	transform: translate(950%, -65%);
+	z-index: 6;
+}
+
+#arrow_down {
+	position: absolute;
+	width: 5%;
+	max-height: 650%;
+	transform: translate(950%, 668%);
+	z-index: 6;
+}
+
+#box {
+	font-size: 2.5vw;
+}
+
+/*#another_one {
+	position: absolute;
+	height: 0.5%;
+	width: 23%;
+	transform: translate(169%, 600%);
+	z-index: 6;
+	background-color: white;
 }

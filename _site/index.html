@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Portfolio</title>
+
+		<!-- This is for bootstrap -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!--Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<!--Optional theme -->
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+		<!--This is my CSS file -->
+		<link rel="stylesheet" type="text/css" href="index.css">
+
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Catamaran:300,400,100' rel='stylesheet' type='text/css'>
+		<!-- This is the important part -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script type="text/javascript" src="canvas.js"></script>
+
+	</head>
+	<body>
+		<canvas id="main_background"></canvas>
+		<!-- Scripts for canvas  -->
+		<script type="text/javascript" src="canvas.js"></script>
+
+		
+		<div class="display">
+			<img class="mySlides w3-animate-top" align="middle" src="photos/key.ico">
+			<img class="mySlides w3-animate-top" align="middle" src="photos/board.png">
+			<img class="mySlides w3-animate-top" align="middle" src="photos/leaf.png">
+			<img class="mySlides w3-animate-top" align="middle" src="photos/plane.png">
+			<img class="mySlides w3-animate-top" align="middle" src="photos/car.png">
+		</div>
+
+		<a onclick="plusDivs(-1)" id="top_button" href="#"></a>
+		<a onclick="plusDivs(+1)"  id="bottom_button" href="#"></a>
+
+		<div id="icons">
+			<ul><i class="fa fa-github text-success" aria-hidden="true" style="color:white"></i></ul>
+			<ul></ul>
+			<ul></ul>
+		</div>
+
+
+		<!-- <h1 id="over">Test hi</h1> -->
+
+		<!--Ton of Javascript...-->
+		<script>
+		var colors = ["rgb(34, 72, 94)", "rgb(116, 176, 137)", "rgb(240, 230, 151)", "rgb(255, 158, 133)", "rgb(255, 84, 97)"];
+		var slideIndex = 1;
+		var colorIndex = 1;
+		showDivs(slideIndex);
+		color(colorIndex);
+
+		function plusDivs(n) {
+			showDivs(slideIndex += n);
+			color(colorIndex += n);
+		}
+
+		function showDivs(n) {
+		  var i;
+		  var x = document.getElementsByClassName("mySlides");
+		  if (n > x.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = x.length}
+		  for (i = 0; i < x.length; i++) {
+		     x[i].style.display = "none";  
+		  }
+		  x[slideIndex-1].style.display = "block";
+
+		}
+
+		function color(n) {
+			var i;
+			var c = document.getElementsByTagName('canvas');
+			if (n > colors.length) {colorIndex = 1}
+			if (n < 1) {colorIndex = colors.length}
+			document.body.style.backgroundColor = colors[colorIndex - 1];	
+		}
+
+			// var balloon = $('#top_button');
+		 //   	function runIt() {
+		 //       balloon.animate({top:'+=5'}, 1000);
+		 //       balloon.animate({top:'-=5'}, 1000, runIt);
+		 //    }
+
+	  //  		runIt();
+		</script>
+
+	</body>
+</html>

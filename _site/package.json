@@ -1,0 +1,11 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "jquery",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Candace",
+  "license": "ISC"
+}

@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Portfolio</title>
+		<title>Candace Williams</title>
 
 		<!-- This is for bootstrap -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,81 +15,71 @@
 
 		<!--This is my CSS file -->
 		<link rel="stylesheet" type="text/css" href="index.css">
+		<link rel="shortcut icon" type="image/x-icon" href="photos/black_icon.ico" />
 
-		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Catamaran:300,400,100' rel='stylesheet' type='text/css'>
+		<!--Google fonts-->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Catamaran:300,400,100' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Armata' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Barrio' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Bubbler One' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Bad Script' rel='stylesheet'>
+
 		<!-- This is the important part -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script type="text/javascript" src="canvas.js"></script>
 
 	</head>
 	<body>
-		<canvas id="main_background"></canvas>
+		<canvas id="main_background">
+			<h1>If you're seeing this, your browser does not support canvas</h1>
+		</canvas>
 		<!-- Scripts for canvas  -->
 		<script type="text/javascript" src="canvas.js"></script>
 
 		
 		<div class="display">
-			<img class="mySlides w3-animate-top" align="middle" src="photos/key.ico">
-			<img class="mySlides w3-animate-top" align="middle" src="photos/board.png">
-			<img class="mySlides w3-animate-top" align="middle" src="photos/leaf.png">
-			<img class="mySlides w3-animate-top" align="middle" src="photos/plane.png">
-			<img class="mySlides w3-animate-top" align="middle" src="photos/car.png">
+			<img class="mySlides w3-animate-top" align="middle" src="photos/analytics.png">
+			<img class="mySlides w3-animate-top" align="middle" src="photos/art.png">
+			<img class="mySlides w3-animate-top" align="middle" src="photos/html.png">
+			<img class="mySlides w3-animate-top" align="middle" src="photos/message.png">
+			<img class="mySlides w3-animate-top" align="middle" src="photos/galaxy.png">
+		</div>
+
+		<div class="display2">
+			<h1 class="w3-animate-left" id="box">Hello, I'm Candace. I'm an aspiring programmer</h1>
 		</div>
 
 		<a onclick="plusDivs(-1)" id="top_button" href="#"></a>
 		<a onclick="plusDivs(+1)"  id="bottom_button" href="#"></a>
 
-		<div id="icons">
-			<ul><i class="fa fa-github text-success" aria-hidden="true" style="color:white"></i></ul>
-			<ul></ul>
-			<ul></ul>
-		</div>
+		<ul class="tab">
+			<!-- <li><a class="icons"><img src="photos/white_icon.ico"></a> -->
+			<li><a class="icons" href='https://github.com/CandaceWilliams15'><img src="photos/github.png"></a></li>
+			<li><a class="icons" href='https://www.facebook.com/candace.williams.39750121'><img src="photos/facebook.png"></a></li>
+			<li><a class="icons" href='https://www.linkedin.com/in/candace-williams-311ba4148/'><img src="photos/linkedin.png"></a></li>
+			<li><a class="icons" href='mailto:candace.williams@matchstudent.org'><img src="photos/envelope.png"></a></li>
+		</ul>
+
+		<!-- <a href="#"><i onclick="plusDivs(-1)" id="arrow_up" class="fa fa-angle-up fa-5x" aria-hidden="true"></i></a>
+		<a href="#"><i onclick="plusDivs(+1)" id="arrow_down" class="fa fa-angle-down fa-5x" aria-hidden="true"></i></a> -->
+		<a onclick="plusDivs(-1)" href="#"><img id="arrow_up" src="photos/up_arrow.png"></a>
+		<a onclick="plusDivs(+1)" href="#"><img id="arrow_down" src="photos/down_arrow.png"></a>
+
+
+		<!-- <h3>This is for testing</h3> -->
+
 
 
 		<!-- <h1 id="over">Test hi</h1> -->
 
 		<!--Ton of Javascript...-->
-		<script>
-		var colors = ["rgb(34, 72, 94)", "rgb(116, 176, 137)", "rgb(240, 230, 151)", "rgb(255, 158, 133)", "rgb(255, 84, 97)"];
-		var slideIndex = 1;
-		var colorIndex = 1;
-		showDivs(slideIndex);
-		color(colorIndex);
 
-		function plusDivs(n) {
-			showDivs(slideIndex += n);
-			color(colorIndex += n);
-		}
+		<script type="text/javascript" src="move.js"></script>
+		<script type="text/javascript" src="secondary_style.js"></script>
 
-		function showDivs(n) {
-		  var i;
-		  var x = document.getElementsByClassName("mySlides");
-		  if (n > x.length) {slideIndex = 1}    
-		  if (n < 1) {slideIndex = x.length}
-		  for (i = 0; i < x.length; i++) {
-		     x[i].style.display = "none";  
-		  }
-		  x[slideIndex-1].style.display = "block";
-
-		}
-
-		function color(n) {
-			var i;
-			var c = document.getElementsByTagName('canvas');
-			if (n > colors.length) {colorIndex = 1}
-			if (n < 1) {colorIndex = colors.length}
-			document.body.style.backgroundColor = colors[colorIndex - 1];	
-		}
-
-			// var balloon = $('#top_button');
-		 //   	function runIt() {
-		 //       balloon.animate({top:'+=5'}, 1000);
-		 //       balloon.animate({top:'-=5'}, 1000, runIt);
-		 //    }
-
-	  //  		runIt();
-		</script>
 
 	</body>
 </html>
